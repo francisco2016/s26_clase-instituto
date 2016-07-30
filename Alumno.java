@@ -12,7 +12,8 @@ public class Alumno
     private int aulaNum;
     
     private double[] notes;
-    
+    //constante para determinar la nota mínima de aprobado.
+    public static final int NOTA_DE_APROBADO = 5; 
 
     public Alumno(String nameAlum, int ageAlum) {
         this.nameAlum = nameAlum;
@@ -45,6 +46,13 @@ public class Alumno
             notaM += notes[i];
         }
         return notaM / notes.length;
+    }
+    
+     /**
+     * indique si el alumno esta aprobado o no en función de su nota media actual
+     */
+    public boolean estaAprobado(){
+        return averageRating() >= NOTA_DE_APROBADO;
     }
 }
 
