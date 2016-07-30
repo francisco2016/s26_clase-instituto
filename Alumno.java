@@ -22,6 +22,19 @@ public class Alumno
         
         notes = new double[0];
     }
+    
+        //permita introducir una nota entera del alumno. Este método se peude invocar tantas veces como deseemos.
+    public void notesAlum(int note){
+        if(note < 0 || note > 10){
+            note = 5; 
+        }
+        double[] notes2 = notes;
+        notes = new double[notes.length +1];
+        for(int i = 0; i < notes2.length; i ++){
+            notes[i] = notes2[i];
+        }
+        notes[notes2.length] = note;
+    }
 }
 
 
