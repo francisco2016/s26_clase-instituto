@@ -54,6 +54,20 @@ public class Alumno
     public boolean estaAprobado(){
         return averageRating() >= NOTA_DE_APROBADO;
     }
+    
+        /**
+     * muestre todos los datos del alumno: nombe, edad, numero de clase, notas, nota media y si esta o no aprobado.
+     */
+    public void datosAlumno(){
+        System.out.println("----- DATOS DEL ALUMNO/A -----");
+        System.out.println("Nombre;    " +nameAlum+ "\nEdad;      " +ageAlum+ "\nNotas; ");
+        for(int i = 0; i < notes.length; i ++){
+            System.out.println( (i +1)+ " --- " +notes[i]);
+        }
+        System.out.println("Nota media;  " +averageRating());
+        System.out.println("¿El alumno/a está aprobado? " +estaAprobado());
+        System.out.println("    ----------------------------");  
+    }
 }
 
 
