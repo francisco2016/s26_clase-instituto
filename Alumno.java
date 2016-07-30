@@ -35,6 +35,17 @@ public class Alumno
         }
         notes[notes2.length] = note;
     }
+    
+     /**
+     * permita conocer la nota media (en decimal) del alumno en este momento
+     */
+    public double averageRating(){
+        double notaM = 0;
+        for(int i = 0; i < notes.length; i ++){
+            notaM += notes[i];
+        }
+        return notaM / notes.length;
+    }
 }
 
 
