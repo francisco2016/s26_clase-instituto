@@ -8,7 +8,7 @@ public class Alumno
     private String nameAlum;
     private int ageAlum;
     //variables para facilitar la numeración de las aulas.
-    private static int sumador = 1;
+    private static int sumador = 11;
     private int aulaNum;
     
     private double[] notes;
@@ -24,7 +24,7 @@ public class Alumno
         notes = new double[0];
     }
     
-        //permita introducir una nota entera del alumno. Este método se peude invocar tantas veces como deseemos.
+        //permita introducir una nota entera del alumno. Este método se puede invocar tantas veces como deseemos.
     public void notesAlum(int note){
         if(note < 0 || note > 10){
             note = 5; 
@@ -60,7 +60,7 @@ public class Alumno
      */
     public void datosAlumno(){
         System.out.println("----- DATOS DEL ALUMNO/A -----");
-        System.out.println("Nombre;    " +nameAlum+ "\nEdad;      " +ageAlum+ "\nNotas; ");
+        System.out.println("Nombre;    " +nameAlum+ "\nEdad;      " +ageAlum+ "\nAula nº 02" +aulaNum+  "\nNotas; ");
         for(int i = 0; i < notes.length; i ++){
             System.out.println( (i +1)+ " --- " +notes[i]);
         }
